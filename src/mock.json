@@ -1,0 +1,134 @@
+[ {
+  "category" : "SPA 브랜드",
+  "id" : "a",
+  "japan" : {
+    "brandColor" : "#D43A2F",
+    "brandImageUrl" : "/img/brands/uniqlo.png",
+    "facebookPageUrl" : "https://www.facebook.com/uniqlo.kr/",
+    "like" : 494059,
+    "likeHistory" : [ 494097, 494011, 493937, 493875, 493850, 493807, 493781 ],
+    "name" : "유니클로"
+  },
+  "korea" : {
+    "brandColor" : "#ffffff",
+    "brandImageUrl" : "/img/brands/spao.jpg",
+    "facebookPageUrl" : "https://www.facebook.com/SPAOSTORY/",
+    "like" : 332415,
+    "likeHistory" : [ 332431, 332408, 332394, 332374, 332366, 332364, 332378 ],
+    "name" : "스파오"
+  }
+}, {
+  "category" : "편의점",
+  "id" : "b",
+  "japan" : {
+    "brandColor" : "#ffffff",
+    "brandImageUrl" : "/img/brands/ministop.jpg",
+    "facebookPageUrl" : "https://www.facebook.com/ministopkr/",
+    "like" : 125422,
+    "likeHistory" : [ 125430, 125419, 125399, 125382, 125403, 125513, 125605 ],
+    "name" : "미니스톱"
+  },
+  "korea" : {
+    "brandColor" : "#ffffff",
+    "brandImageUrl" : "/img/brands/emart24.png",
+    "facebookPageUrl" : "https://www.facebook.com/emart24.official",
+    "like" : 58401,
+    "likeHistory" : [ 58404, 58400, 58388, 58380, 58376, 58383, 58396 ],
+    "name" : "이마트24"
+  }
+}, {
+  "category" : "슈즈 멀티 스토어",
+  "id" : "c",
+  "japan" : {
+    "brandColor" : "#FFDD00",
+    "brandImageUrl" : "/img/brands/abcmart.jpg",
+    "facebookPageUrl" : "https://www.facebook.com/abcmartkorea/",
+    "like" : 213607,
+    "likeHistory" : [ 213623, 213587, 213570, 213562, 213548, 213555, 213536 ],
+    "name" : "에이비씨마트"
+  },
+  "korea" : {
+    "brandColor" : "#ffffff",
+    "brandImageUrl" : "/img/brands/lesmore.jpg",
+    "facebookPageUrl" : "https://www.facebook.com/lesmore.official",
+    "like" : 102804,
+    "likeHistory" : [ 102755, 102855, 102990, 103005, 102989, 102976, 102996 ],
+    "name" : "레스모아"
+  }
+}, {
+  "category" : "시계",
+  "id" : "d",
+  "japan" : {
+    "brandColor" : "#000000",
+    "brandImageUrl" : "/img/brands/gshock.png",
+    "facebookPageUrl" : "https://www.facebook.com/koreagshock/",
+    "like" : 101078,
+    "likeHistory" : [ 101586, 101586, 101586, 101586, 101586, 101586, 101586 ],
+    "name" : "G-SHOCK"
+  },
+  "korea" : {
+    "brandColor" : "#ffffff",
+    "brandImageUrl" : "/img/brands/dolphinwatch.png",
+    "facebookPageUrl" : "https://www.facebook.com/DolphinWatch",
+    "like" : 30,
+    "likeHistory" : [ 29, 30, 30, 30, 30, 30, 30 ],
+    "name" : "Dolphin"
+  }
+}, {
+  "category" : "생활 용품",
+  "id" : "e",
+  "japan" : {
+    "brandColor" : "#970A2C",
+    "brandImageUrl" : "/img/brands/muji.jpg",
+    "facebookPageUrl" : "https://www.facebook.com/mujikorea/",
+    "like" : 104521,
+    "likeHistory" : [ 104520, 104520, 104514, 104513, 104507, 104504, 104491 ],
+    "name" : "MUJI"
+  },
+  "korea" : {
+    "brandColor" : "#58585A",
+    "brandImageUrl" : "/img/brands/jaju.jpg",
+    "facebookPageUrl" : "https://www.facebook.com/shinsegaejaju",
+    "like" : 65920,
+    "likeHistory" : [ 65917, 65918, 65915, 65908, 65905, 65907, 65905 ],
+    "name" : "JAJU"
+  }
+}, {
+  "category" : "남성 뷰티",
+  "id" : "f",
+  "japan" : {
+    "brandColor" : "#ffffff",
+    "brandImageUrl" : "/img/brands/ulos.jpg",
+    "facebookPageUrl" : "https://www.facebook.com/ULOS.KR/",
+    "like" : 34984,
+    "likeHistory" : [ 34984, 34984, 34983, 34979, 34976, 34977, 34978 ],
+    "name" : "우르오스"
+  },
+  "korea" : {
+    "brandColor" : "#ffffff",
+    "brandImageUrl" : "/img/brands/brontips.jpg",
+    "facebookPageUrl" : "https://www.facebook.com/Brontips.kr",
+    "like" : 30196,
+    "likeHistory" : [ 30200, 30196, 30193, 30185, 30177, 30174, 30172 ],
+    "name" : "브로앤팁스"
+  }
+}, {
+  "category" : "맥주",
+  "id" : "g",
+  "japan" : {
+    "brandColor" : "#000000",
+    "brandImageUrl" : "/img/brands/asahi.png",
+    "facebookPageUrl" : "https://www.facebook.com/Asahikr/",
+    "like" : 94232,
+    "likeHistory" : [ 94231, 94225, 94205, 94205, 94189, 94179, 94166 ],
+    "name" : "아사히"
+  },
+  "korea" : {
+    "brandColor" : "#ffffff",
+    "brandImageUrl" : "/img/brands/thebooth.png",
+    "facebookPageUrl" : "https://www.facebook.com/theboothbrewing",
+    "like" : 18606,
+    "likeHistory" : [ 18602, 18602, 18602, 18602, 18602, 18602, 18602 ],
+    "name" : "더부스"
+  }
+} ]

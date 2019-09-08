@@ -12,11 +12,6 @@ body {
   box-sizing: inherit;
 }
 
-code {
-  font-family: 'Fira Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
-}
-
 input, button, textarea {
   font-family: inherit;
 }

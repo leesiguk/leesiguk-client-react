@@ -1,10 +1,23 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const Card: React.FC = () => {
+const CardBlock = styled.div`
+  padding: 8px;
+  
+  .card-content {
+    background-color: #ffffff;
+    width: 300px;
+    height: 500px;
+  }
+`;
+
+const Card: React.FC = ({children}) => {
   return (
-    <div>
-      card
-    </div>
+    <CardBlock>
+      <div className="card-content">
+        {children}
+      </div>
+    </CardBlock>
   );
 };
 
