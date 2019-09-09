@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import logo from '../../assets/logo.png';
 
 const AppBarBlock = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: #282D49;
   width: 100%;
   height: 64px;
