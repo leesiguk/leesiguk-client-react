@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import Card from '../common/Card';
+import MainCard from './MainCard';
 
 const MainContentBlock = styled.div`
   width: 100%;
   max-width: 1280px;
-  padding: 16px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: ${64 + 12}px 12px 12px 12px;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 export interface Brand {
@@ -32,9 +34,11 @@ interface MainContentProps {
 
 const MainContent: React.FC<MainContentProps> = ({games}) => {
   const cardList = games.map(game => (
-    <Card key={game.id}>
-      card Content
-    </Card>
+    <MainCard
+      key={game.id}
+      game={game}
+    >
+    </MainCard>
   ));
 
   return (
