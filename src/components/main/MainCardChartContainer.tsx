@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import { Game } from './MainContent';
+import { Game } from '../../containers/Main';
 import palette from '../../lib/styles/pallete';
 import MainCardCurrentLikeChart from './MainCardCurrentLikeChart';
 

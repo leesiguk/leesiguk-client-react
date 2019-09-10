@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Brand} from './MainContent';
+import { Brand } from '../../containers/Main';
 import Image from '../common/Image';
 import palette from '../../lib/styles/pallete';
 
@@ -41,7 +41,7 @@ const LikeCount = styled.div`
     line-height: 14px;
     text-align: center;
   }
-  
+
   .like-text {
     padding-left: 4px;
     font-size: 13px;
@@ -57,24 +57,20 @@ const FacebookButtonWrapper = styled.div`
 `;
 
 interface MainCardBrandProps {
-  brand: Brand,
-  brandType: string
+  brand: Brand;
+  brandType: string;
 }
 
-const MainCardBrand: React.FC<MainCardBrandProps> = (
-  {
-    brand,
-    brandType,
-  },
-) => {
-  const flagUrl = (brandType: string) => `/img/flag-${brandType === 'korea' ? 'kr' : 'jp'}.png`;
+const MainCardBrand: React.FC<MainCardBrandProps> = ({ brand, brandType }) => {
+  const flagUrl = (brandType: string) =>
+    `/img/flag-${brandType === 'korea' ? 'kr' : 'jp'}.png`;
   const addComma = (number: number) => number.toLocaleString();
 
   return (
     <MainCardBrandBlock>
       <ImageWrapper>
-        <Image src={brand.brandImageUrl}/>
-        <NationalFlagImage src={flagUrl(brandType)} alt="national flag"/>
+        <Image src={brand.brandImageUrl} />
+        <NationalFlagImage src={flagUrl(brandType)} alt="national flag" />
       </ImageWrapper>
       <BrandName>{brand.name}</BrandName>
       <LikeCount>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Image from '../common/Image';
-import { Game } from './MainContent';
+import { Game } from '../../containers/Main';
 
 const MainCardCurrentLikeChartBlock = styled.div<{
   brandType: 'japan' | 'korea';
