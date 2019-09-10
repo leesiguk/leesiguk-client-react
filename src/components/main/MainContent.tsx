@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import MainCard from './MainCard';
+
+declare const FB: any;
 
 const MainContentBlock = styled.div`
   width: 100%;
@@ -33,6 +35,14 @@ interface MainContentProps {
 }
 
 const MainContent: React.FC<MainContentProps> = ({games}) => {
+  useEffect(() => {
+    FB.init({
+      appId: '378770669689001',
+      xfbml: true,
+      version: 'v4.0',
+    });
+  }, []);
+
   const cardList = games.map(game => (
     <MainCard
       key={game.id}

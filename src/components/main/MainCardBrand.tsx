@@ -49,6 +49,13 @@ const LikeCount = styled.div`
   }
 `;
 
+const FacebookButtonWrapper = styled.div`
+  width: 100%;
+  height: 40px;
+  padding-top: 8px;
+  text-align: center;
+`;
+
 interface MainCardBrandProps {
   brand: Brand,
   brandType: string
@@ -74,6 +81,18 @@ const MainCardBrand: React.FC<MainCardBrandProps> = (
         <i className="material-icons like-icon">thumb_up</i>
         <span className="like-text">{addComma(brand.like)}</span>
       </LikeCount>
+      <FacebookButtonWrapper>
+        <div
+          className="fb-like"
+          data-href={brand.facebookPageUrl}
+          data-width=""
+          data-layout="button"
+          data-action="like"
+          data-size="large"
+          data-show-faces="false"
+          data-share="false"
+        />
+      </FacebookButtonWrapper>
     </MainCardBrandBlock>
   );
 };
