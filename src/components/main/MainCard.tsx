@@ -7,7 +7,7 @@ import MainCardMainContent from './MainCardMainContent';
 import MainCardChartContainer from './MainCardChartContainer';
 
 const MainCardBlock = styled.div`
-  ${elevations(5)};
+  ${elevations(10)};
   background-color: #ffffff;
   width: 100%;
   border-radius: 4px;

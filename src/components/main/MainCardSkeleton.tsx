@@ -15,12 +15,11 @@ const pulse = keyframes`
 `;
 
 const MainCardSkeletonBlock = styled.div`
-  ${elevations(5)};
+  ${elevations(10)};
   background-color: #ffffff;
   width: 100%;
-  height: 550px;
   border-radius: 4px;
-  padding: 16px;
+  padding: 16px 16px 0 16px;
   position: relative;
 `;
 
@@ -45,7 +44,7 @@ const MainContent = styled.div`
   border-radius: 4px;
   margin: 32px 0;
   width: 100%;
-  height: 210px;
+  height: 199px;
   user-select: none;
   animation: ${pulse} 2s infinite ease-in-out;
 `;
