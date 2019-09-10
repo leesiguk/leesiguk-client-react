@@ -43,16 +43,16 @@ const MainContent: React.FC<MainContentProps> = ({games}) => {
     });
   }, []);
 
-  const cardList = games.map(game => (
-    <MainCard
-      key={game.id}
-      game={game}
-    >
-    </MainCard>
-  ));
-
   return (
-    <MainContentBlock>{cardList}</MainContentBlock>
+    <MainContentBlock>
+      {games.map(game => (
+        <MainCard
+          key={game.id}
+          game={game}
+        >
+        </MainCard>
+      ))}
+    </MainContentBlock>
   );
 };
 

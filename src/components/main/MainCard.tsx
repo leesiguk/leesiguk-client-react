@@ -5,6 +5,7 @@ import MainCardHeader from './MainCardHeader';
 import {Game} from './MainContent';
 import {breakpoints} from '../../lib/styles/responsive';
 import MainCardMainContent from './MainCardMainContent';
+import MainCardChartContainer from './MainCardChartContainer';
 
 const MainCardBlock = styled.div`
   padding: 12px;
@@ -38,6 +39,7 @@ const MainCard: React.FC<MainCardProps> = ({game}) => {
       <div className="card-content">
         <MainCardHeader title={game.category}/>
         <MainCardMainContent game={game}/>
+        <MainCardChartContainer game={game}/>
       </div>
     </MainCardBlock>
   );

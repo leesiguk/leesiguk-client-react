@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import {Game} from './MainContent';
 import MainCardBrand from './MainCardBrand';
+import palette from '../../lib/styles/pallete';
 
 const MainCardMainContentBlock = styled.div`
   padding: 32px 0;
   display: flex;
   flex-direction: row;
+  border-bottom: 1px solid ${palette.gray3};
 
   .vs {
       width: 40px;
