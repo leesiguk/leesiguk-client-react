@@ -13,6 +13,7 @@ const AppBarBlock = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 0 16px;
+  z-index: 10;
    
   img {
     width: 160px;
