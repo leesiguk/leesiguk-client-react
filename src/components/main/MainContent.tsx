@@ -1,8 +1,6 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import MainCard from './MainCard';
-
-declare const FB: any;
 
 const MainContentBlock = styled.div`
   width: 100%;
@@ -15,42 +13,38 @@ const MainContentBlock = styled.div`
 `;
 
 export interface Brand {
-  name: string,
-  brandColor: string,
-  brandImageUrl: string,
-  facebookPageUrl: string,
-  like: number,
-  likeHistory: number[],
+  name: string;
+  brandColor: string;
+  brandImageUrl: string;
+  facebookPageUrl: string;
+  like: number;
+  likeHistory: number[];
 }
 
 export interface Game {
-  category: string,
-  id: string,
-  japan: Brand,
-  korea: Brand,
+  category: string;
+  id: string;
+  japan: Brand;
+  korea: Brand;
 }
 
 interface MainContentProps {
-  games: Game[]
+  games: Game[];
 }
 
-const MainContent: React.FC<MainContentProps> = ({games}) => {
+const MainContent: React.FC<MainContentProps> = ({ games }) => {
   useEffect(() => {
     FB.init({
       appId: '378770669689001',
       xfbml: true,
-      version: 'v4.0',
+      version: 'v4.0'
     });
   }, []);
 
   return (
     <MainContentBlock>
       {games.map(game => (
-        <MainCard
-          key={game.id}
-          game={game}
-        >
-        </MainCard>
+        <MainCard key={game.id} game={game}></MainCard>
       ))}
     </MainContentBlock>
   );
