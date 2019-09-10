@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Game } from '../../containers/Main';
 import palette from '../../lib/styles/pallete';
 import MainCardCurrentLikeChart from './MainCardCurrentLikeChart';
+import MainCardLikeTrendChart from './MainCardLikeTrendChart';
 
 const MainCardChartContainerBlock = styled.div``;
 
@@ -40,10 +41,8 @@ const MainCardChartContainer: React.FC<MainCardChartContainerProps> = ({
       </Header>
       {['japan', 'korea'].map((brandType: string | any) => (
         <Fragment key={brandType}>
-          <MainCardCurrentLikeChart
-            game={game}
-            brandType={brandType}
-          ></MainCardCurrentLikeChart>
+          <MainCardCurrentLikeChart game={game} brandType={brandType} />
+          <MainCardLikeTrendChart game={game} brandType={brandType} />
         </Fragment>
       ))}
     </MainCardChartContainerBlock>

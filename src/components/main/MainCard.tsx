@@ -10,8 +10,8 @@ const MainCardBlock = styled.div`
   ${elevations(5)};
   background-color: #ffffff;
   width: 100%;
-  height: 500px;
   border-radius: 4px;
+  overflow: hidden;
 `;
 
 interface MainCardProps {

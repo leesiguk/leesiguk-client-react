@@ -18,7 +18,7 @@ const MainCardSkeletonBlock = styled.div`
   ${elevations(5)};
   background-color: #ffffff;
   width: 100%;
-  height: 500px;
+  height: 550px;
   border-radius: 4px;
   padding: 16px;
   position: relative;
@@ -77,7 +77,9 @@ const BarChart = styled.div`
   user-select: none;
   animation: ${pulse} 2s infinite ease-in-out;
 `;
-const TrendChart = styled.div``;
+const TrendChart = styled.div`
+  height: 40px;
+`;
 
 interface MainCardSkeletonProps {}
 
@@ -92,10 +94,12 @@ const MainCard: React.FC<MainCardSkeletonProps> = () => {
         <BarChartCircle />
         <BarChart />
       </BarChartWrapper>
+      <TrendChart />
       <BarChartWrapper>
         <BarChartCircle />
         <BarChart />
       </BarChartWrapper>
+      <TrendChart />
     </MainCardSkeletonBlock>
   );
 };

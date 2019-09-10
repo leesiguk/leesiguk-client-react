@@ -18,14 +18,17 @@ const MainContentBlock = styled.div`
 const Cols = styled.div`
   padding: 12px;
   flex: 0 0 33.33333333%;
+  max-width: 33.33333333%;
 
   @media (max-width: ${breakpoints.large}) {
     flex: 0 0 50%;
+    max-width: 50%;
   }
 
   @media (max-width: ${breakpoints.medium}) {
     padding: 0;
     flex: 0 0 100%;
+    max-width: 100%;
   }
 `;
 
