@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import MainCard from './MainCard';
+import MainCardSkeleton from './MainCardSkeleton';
 import { Game } from '../../containers/Main';
+import { breakpoints } from '../../lib/styles/responsive';
 
 const MainContentBlock = styled.div`
   width: 100%;
@@ -11,6 +13,20 @@ const MainContentBlock = styled.div`
   padding: ${64 + 12}px 12px 12px 12px;
   display: flex;
   flex-wrap: wrap;
+`;
+
+const Cols = styled.div`
+  padding: 12px;
+  flex: 0 0 33.33333333%;
+
+  @media (max-width: ${breakpoints.large}) {
+    flex: 0 0 50%;
+  }
+
+  @media (max-width: ${breakpoints.medium}) {
+    padding: 0;
+    flex: 0 0 100%;
+  }
 `;
 
 interface MainContentProps {
@@ -25,14 +41,22 @@ const MainContent: React.FC<MainContentProps> = ({ games, loading }) => {
       xfbml: true,
       version: 'v4.0'
     });
-  }, []);
+  }, [loading]);
+
+  const cardList = games.map(game => (
+    <Cols key={game.id}>
+      <MainCard game={game}></MainCard>
+    </Cols>
+  ));
+
+  const skeletonCardList = [...Array(6)].map((n, i) => (
+    <Cols key={i}>
+      <MainCardSkeleton />
+    </Cols>
+  ));
 
   return (
-    <MainContentBlock>
-      {games.map(game => (
-        <MainCard key={game.id} game={game}></MainCard>
-      ))}
-    </MainContentBlock>
+    <MainContentBlock>{loading ? skeletonCardList : cardList}</MainContentBlock>
   );
 };
 
