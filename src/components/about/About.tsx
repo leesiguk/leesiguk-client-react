@@ -59,13 +59,12 @@ const HomeLink = styled(Link)`
 
 const Footer = styled.div`
   position: absolute;
+  top: 0;
   left: 0;
   bottom: 0;
-  right: 0;
-  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   padding: 16px 0;
 `;
@@ -112,6 +111,12 @@ const MainCard: React.FC<AboutProps> = () => {
           <Button link>
             <i className="material-icons">code</i>
             Github
+          </Button>
+        </FooterButtonLink>
+        <FooterButtonLink href="/privacy">
+          <Button link>
+            <i className="material-icons">policy</i>
+            개인정보 처리방침
           </Button>
         </FooterButtonLink>
         <FooterButtonLink
