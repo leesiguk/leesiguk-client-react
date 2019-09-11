@@ -69,7 +69,9 @@ const MainCardBrand: React.FC<MainCardBrandProps> = ({ brand, brandType }) => {
   return (
     <MainCardBrandBlock>
       <ImageWrapper>
-        <Image src={brand.brandImageUrl} />
+        <a href={brand.facebookPageUrl} target="_blank">
+          <Image src={brand.brandImageUrl} />
+        </a>
         <NationalFlagImage src={flagUrl(brandType)} alt="national flag" />
       </ImageWrapper>
       <BrandName>{brand.name}</BrandName>
