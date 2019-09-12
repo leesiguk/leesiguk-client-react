@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import palette from '../../lib/styles/pallete';
+import Share from './Share';
+import { Game } from '../../containers/Main';
 
 const ShareButtonBlock = styled.div`
   padding: 4px 12px;
+  position: relative;
 `;
 
 const ToggleButton = styled.button`
@@ -18,23 +21,29 @@ const ToggleButton = styled.button`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  transition: background-color .3s;
-  
-  &:hover,
-  &:focus {
-    background-color: ${palette.gray2}
+  transition: background-color 0.3s;
+
+  i {
+    color: ${palette.gray7};
   }
 `;
 
-const ShareButton = () => {
+interface ShareButtonProps {
+  game: Game;
+}
+const ShareButton: React.FC<ShareButtonProps> = ({ game }) => {
+  const [show, setShow] = useState(false);
+
   return (
     <ShareButtonBlock>
-      <ToggleButton>
-        <i className="material-icons-outlined">share</i>
+      {show && <Share game={game} />}
+      <ToggleButton onClick={() => setShow(!show)}>
+        {show ? (
+          <i className="material-icons-outlined">chevron_right</i>
+        ) : (
+          <i className="material-icons-outlined">share</i>
+        )}
       </ToggleButton>
-      <div>
-
-      </div>
     </ShareButtonBlock>
   );
 };

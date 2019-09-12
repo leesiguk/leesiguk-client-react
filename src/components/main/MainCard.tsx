@@ -21,7 +21,7 @@ interface MainCardProps {
 const MainCard: React.FC<MainCardProps> = ({ game }) => {
   return (
     <MainCardBlock>
-      <MainCardHeader title={game.category} />
+      <MainCardHeader game={game} />
       <MainCardMainContent game={game} />
       <MainCardChartContainer game={game} />
     </MainCardBlock>
