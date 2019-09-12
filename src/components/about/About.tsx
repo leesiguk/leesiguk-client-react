@@ -7,6 +7,7 @@ import point3 from '../../assets/point_03.png';
 import point4 from '../../assets/point_04.png';
 import Button from '../common/Button';
 import palette from '../../lib/styles/pallete';
+import { breakpoints } from '../../lib/styles/responsive';
 
 const AboutBlock = styled.div`
   background-color: #282d49;
@@ -19,8 +20,13 @@ const MainContent = styled.div`
   align-items: center;
   justify-content: center;
 
+  .logo {
+    max-width: 100%;
+    width: 800px;
+  }
+
   .point {
-    position: absolute;
+    position: fixed;
     width: 35px;
     height: 35px;
     opacity: 0.2;
@@ -48,23 +54,24 @@ const MainContent = styled.div`
   }
 `;
 
-const HomeLink = styled(Link)`
-  .logo {
-    max-width: 100%;
-    width: 800px;
-  }
-`;
-
 const ArrowDown = styled.div<{ scrollY: number }>`
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   text-align: center;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    i {
+      color: rgba(255, 255, 255, 0.76);
+    }
+  }
 
   i {
     font-size: 48px;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, color 0.3s;
     color: rgba(255, 255, 255, 0.26);
     animation-name: bounce;
     animation-duration: 2.5s;
@@ -104,6 +111,10 @@ const Menu = styled.div`
   align-items: center;
   padding: 16px 48px;
   flex-wrap: wrap;
+
+  @media (max-width: ${breakpoints.medium}) {
+    flex-direction: column;
+  }
 `;
 
 const ButtonLink = styled.a`
@@ -132,6 +143,13 @@ const MainCard: React.FC<AboutProps> = () => {
     setScrollY(window.scrollY);
   };
 
+  const scrollToBottom = () => {
+    window.scrollTo({
+      behavior: 'smooth',
+      top: document.body.scrollHeight,
+    });
+  };
+
   useEffect(() => {
     setScrollY(window.scrollY);
     window.addEventListener('scroll', onScroll);
@@ -143,19 +161,13 @@ const MainCard: React.FC<AboutProps> = () => {
   return (
     <AboutBlock>
       <MainContent>
-        <HomeLink to="/">
-          <img
-            src="/img/icons/social-810x810.png"
-            alt="logo"
-            className="logo"
-          />
-        </HomeLink>
+        <img src="/img/icons/social-810x810.png" alt="logo" className="logo" />
         <img className="point geon" src={point1} alt="geon" />
         <img className="point gon" src={point2} alt="gon" />
         <img className="point gam" src={point3} alt="gam" />
         <img className="point li" src={point4} alt="li" />
       </MainContent>
-      <ArrowDown scrollY={scrollY}>
+      <ArrowDown scrollY={scrollY} onClick={scrollToBottom}>
         <i className="material-icons">keyboard_arrow_down</i>
       </ArrowDown>
       <Menu>
