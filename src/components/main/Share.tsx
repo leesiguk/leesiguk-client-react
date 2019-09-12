@@ -11,6 +11,31 @@ const ShareBlock = styled.div`
   display: flex;
   flex-direction: row;
   padding: 4px 12px 4px 12px;
+
+  &.slide-enter {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+
+  &.slide-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &.slide-exit {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &.slide-exit-active {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+
+  &.slide-enter-active,
+  &.slide-exit-active {
+    transition: all 0.2s ease;
+  }
 `;
 
 const SocialButton = styled.button`

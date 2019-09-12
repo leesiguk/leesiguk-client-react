@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import palette from '../../lib/styles/pallete';
 import Share from './Share';
 import { Game } from '../../containers/Main';
+import { CSSTransition } from 'react-transition-group';
 
 const ShareButtonBlock = styled.div`
   padding: 4px 12px;
@@ -36,7 +37,9 @@ const ShareButton: React.FC<ShareButtonProps> = ({ game }) => {
 
   return (
     <ShareButtonBlock>
-      {show && <Share game={game} />}
+      <CSSTransition in={show} timeout={200} classNames="slide" unmountOnExit>
+        <Share game={game} />
+      </CSSTransition>
       <ToggleButton onClick={() => setShow(!show)}>
         {show ? (
           <i className="material-icons-outlined">chevron_right</i>
