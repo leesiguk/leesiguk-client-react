@@ -1,10 +1,10 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Image from '../common/Image';
-import { Game } from '../../containers/Main';
+import { Game, BrandType } from '../../containers/Main';
 
 const MainCardCurrentLikeChartBlock = styled.div<{
-  brandType: 'japan' | 'korea';
+  brandType: BrandType;
 }>`
   ${props =>
     props.brandType === 'korea'
@@ -33,7 +33,7 @@ const ChartWrapper = styled.div`
   position: relative;
 `;
 
-const ChartBar = styled.div<{ brandType: 'japan' | 'korea' }>`
+const ChartBar = styled.div<{ brandType: BrandType }>`
   position: absolute;
   top: 0;
   left: 0;
@@ -63,18 +63,18 @@ const ChartBar = styled.div<{ brandType: 'japan' | 'korea' }>`
 
 interface MainCardCurrentLikeChartProps {
   game: Game;
-  brandType: 'japan' | 'korea';
+  brandType: BrandType;
 }
 
 const MainCardCurrentLikeChart: React.FC<MainCardCurrentLikeChartProps> = ({
   game,
-  brandType
+  brandType,
 }) => {
   const brand = game[brandType];
-  const getWidth = (brandType: 'japan' | 'korea') => {
+  const getWidth = (brandType: BrandType) => {
     const width: { japan: string; korea: string } = {
       japan: '',
-      korea: ''
+      korea: '',
     };
 
     if (game.japan.like > game.korea.like) {
@@ -86,7 +86,7 @@ const MainCardCurrentLikeChart: React.FC<MainCardCurrentLikeChartProps> = ({
     }
 
     return {
-      width: width[brandType]
+      width: width[brandType],
     };
   };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Game } from '../../containers/Main';
+import { Game, BrandType } from '../../containers/Main';
 import Chart from 'react-apexcharts';
 
 const MainCardLikeTrendChartBlock = styled.div`
@@ -10,41 +10,41 @@ const MainCardLikeTrendChartBlock = styled.div`
 `;
 
 interface MainCardLikeTrendChartProps {
-  brandType: 'japan' | 'korea';
+  brandType: BrandType;
   game: Game;
 }
 
 const MainCardLikeTrendChart: React.FC<MainCardLikeTrendChartProps> = ({
   brandType,
-  game
+  game,
 }) => {
   const brand = game[brandType];
   const series: any = [
     {
       name: brand.name,
-      data: brand.likeHistory
-    }
+      data: brand.likeHistory,
+    },
   ];
   const chartOptions: any = {
     stroke: {
       width: 2,
-      curve: 'smooth'
+      curve: 'smooth',
     },
     tooltip: {
-      enabled: false
+      enabled: false,
     },
     colors: [brandType === 'korea' ? '#0072ff' : '#FF3838'],
     chart: {
       animations: {
-        enabled: false
+        enabled: false,
       },
       toolbar: {
-        show: false
+        show: false,
       },
       sparkline: {
-        enabled: true
-      }
-    }
+        enabled: true,
+      },
+    },
   };
   return (
     <MainCardLikeTrendChartBlock>

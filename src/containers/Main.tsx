@@ -19,6 +19,8 @@ export interface Game {
   korea: Brand;
 }
 
+export type BrandType = 'japan' | 'korea';
+
 const Main = () => {
   const [games, loading] = useListVals<Game>(db.ref('/'));
 
