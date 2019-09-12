@@ -12,8 +12,8 @@ const MainPageBlock = styled.div`
 const MainPage: React.FC = () => {
   return (
     <MainPageBlock>
-      <AppBar/>
-      <Main/>
+      <AppBar />
+      <Main />
     </MainPageBlock>
   );
 };
