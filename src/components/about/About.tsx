@@ -123,7 +123,7 @@ const ButtonLink = styled.a`
     margin-right: 8px;
 
     &.heart {
-      color: ${palette.red8};
+      color: ${palette.red6};
     }
   }
 `;

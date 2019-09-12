@@ -53,7 +53,7 @@ const AboutLink = styled(Link)`
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s;
-  color: ${palette.red8};
+  color: ${palette.red6};
 
   &:hover,
   &:focus {
