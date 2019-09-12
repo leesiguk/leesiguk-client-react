@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import AppBar from '../common/AppBar';
 
 const PrivacyBlock = styled.div`
   padding-top: 64px;
@@ -23,7 +22,7 @@ const Content = styled.section``;
 
 interface PrivacyProps {}
 
-const Privacy: React.FC<PrivacyProps> = ({}) => {
+const Privacy: React.FC<PrivacyProps> = () => {
   return (
     <PrivacyBlock>
       <PrivacyContentBlock>
