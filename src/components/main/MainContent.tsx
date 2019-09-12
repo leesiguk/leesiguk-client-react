@@ -4,6 +4,7 @@ import MainCard from './MainCard';
 import MainCardSkeleton from './MainCardSkeleton';
 import { Game } from '../../containers/Main';
 import { breakpoints } from '../../lib/styles/responsive';
+import MainCardAds from './MainCardAds';
 
 const MainContentBlock = styled.div`
   width: 100%;
@@ -38,19 +39,29 @@ interface MainContentProps {
 }
 
 const MainContent: React.FC<MainContentProps> = ({ games, loading }) => {
-  useEffect(() => {
+  const FBInit = (loading: boolean) => {
+    if (loading) {
+      return;
+    }
+
     FB.init({
       appId: '378770669689001',
       xfbml: true,
       version: 'v4.0'
     });
+  };
+
+  useEffect(() => {
+    FBInit(loading);
   }, [loading]);
 
-  const cardList = games.map(game => (
-    <Cols key={game.id}>
-      <MainCard game={game}></MainCard>
-    </Cols>
-  ));
+  const cardList = games.map((game, i) => {
+    return (
+      <Cols key={game.id}>
+        <MainCard game={game}></MainCard>
+      </Cols>
+    );
+  });
 
   const skeletonCardList = [...Array(6)].map((n, i) => (
     <Cols key={i}>
@@ -59,7 +70,14 @@ const MainContent: React.FC<MainContentProps> = ({ games, loading }) => {
   ));
 
   return (
-    <MainContentBlock>{loading ? skeletonCardList : cardList}</MainContentBlock>
+    <MainContentBlock>
+      {loading ? skeletonCardList : cardList}
+      {!loading && (
+        <Cols>
+          <MainCardAds />
+        </Cols>
+      )}
+    </MainContentBlock>
   );
 };
 
