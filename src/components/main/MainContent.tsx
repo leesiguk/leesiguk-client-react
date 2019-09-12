@@ -14,6 +14,10 @@ const MainContentBlock = styled.div`
   padding: ${64 + 12}px 12px 12px 12px;
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: ${breakpoints.medium}) {
+    padding: ${64 + 8}px 8px 8px 8px;
+  }
 `;
 
 const Cols = styled.div`
@@ -27,7 +31,7 @@ const Cols = styled.div`
   }
 
   @media (max-width: ${breakpoints.medium}) {
-    padding: 0;
+    padding: 8px;
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -47,7 +51,7 @@ const MainContent: React.FC<MainContentProps> = ({ games, loading }) => {
     FB.init({
       appId: '378770669689001',
       xfbml: true,
-      version: 'v4.0'
+      version: 'v4.0',
     });
   };
 
