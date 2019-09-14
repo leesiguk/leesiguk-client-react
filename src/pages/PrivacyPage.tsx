@@ -5,7 +5,7 @@ import AppBar from '../components/common/AppBar';
 import { Helmet } from 'react-helmet';
 
 const PrivacyPageBlock = styled.div`
-  background-color: #282d49;
+  background-color: ${props => props.theme.backgroundColor};
   width: 100%;
   height: 100%;
 `;

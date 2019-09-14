@@ -11,7 +11,7 @@ const PrivacyContentBlock = styled.div`
   max-width: 1024px;
   margin: 0 auto;
   padding: 16px;
-  color: #ffffff;
+  color: ${props => props.theme.typography.color2};
 `;
 
 const Title = styled.h1`
