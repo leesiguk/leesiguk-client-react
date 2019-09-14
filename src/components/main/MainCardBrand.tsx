@@ -26,7 +26,7 @@ const NationalFlagImage = styled.img`
 const BrandName = styled.div`
   padding-top: 24px;
   font-size: 18px;
-  color: ${palette.gray8};
+  color: ${props => props.theme.typography.color2};
 `;
 
 const LikeCount = styled.div`
@@ -45,7 +45,7 @@ const LikeCount = styled.div`
   .like-text {
     padding-left: 4px;
     font-size: 13px;
-    color: ${palette.gray6};
+    color: ${props => props.theme.typography.color4};
   }
 `;
 

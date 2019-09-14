@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import palette from '../../lib/styles/pallete';
 import Share from './Share';
 import { Game } from '../../containers/Main';
 import { CSSTransition } from 'react-transition-group';
@@ -25,7 +24,7 @@ const ToggleButton = styled.button`
   transition: background-color 0.3s;
 
   i {
-    color: ${palette.gray7};
+    color: ${props => props.theme.typography.color3};
   }
 `;
 

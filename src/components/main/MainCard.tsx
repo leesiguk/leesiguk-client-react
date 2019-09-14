@@ -8,7 +8,7 @@ import MainCardChartContainer from './MainCardChartContainer';
 
 const MainCardBlock = styled.div`
   ${elevations(10)};
-  background-color: #ffffff;
+  background-color: ${props => props.theme.card.backgroundColor};
   width: 100%;
   border-radius: 4px;
   overflow: hidden;

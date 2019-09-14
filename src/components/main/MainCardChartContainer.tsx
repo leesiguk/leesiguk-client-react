@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { Game } from '../../containers/Main';
-import palette from '../../lib/styles/pallete';
 import MainCardCurrentLikeChart from './MainCardCurrentLikeChart';
 import MainCardLikeTrendChart from './MainCardLikeTrendChart';
 
@@ -15,13 +14,14 @@ const Header = styled.div`
 
 const Title = styled.div`
   font-size: 16px;
-  color: ${palette.gray8};
+  color: ${props => props.theme.typography.color2};
   flex: 1;
 `;
 
 const Gap = styled.div`
   font-size: 14px;
   font-weight: 500;
+  color: ${props => props.theme.typography.color3};
 `;
 
 interface MainCardChartContainerProps {
@@ -29,7 +29,7 @@ interface MainCardChartContainerProps {
 }
 
 const MainCardChartContainer: React.FC<MainCardChartContainerProps> = ({
-  game
+  game,
 }) => {
   const likeGap = Math.abs(game.japan.like - game.korea.like).toLocaleString();
 

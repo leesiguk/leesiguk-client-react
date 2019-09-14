@@ -27,7 +27,7 @@ const ChartContainer = styled.div`
 const ChartWrapper = styled.div`
   flex: 1 0 auto;
   margin-right: 16px;
-  background-color: #dddddd;
+  background-color: ${props => props.theme.chart.backgroundColor};
   border-radius: 4px;
   overflow: hidden;
   position: relative;

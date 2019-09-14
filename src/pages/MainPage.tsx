@@ -5,7 +5,7 @@ import Main from '../containers/Main';
 import { Helmet } from 'react-helmet';
 
 const MainPageBlock = styled.div`
-  background-color: #fafafa;
+  background-color: ${props => props.theme.backgroundColor};
   width: 100%;
   height: 100%;
 `;

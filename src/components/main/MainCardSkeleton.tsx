@@ -16,7 +16,7 @@ const pulse = keyframes`
 
 const MainCardSkeletonBlock = styled.div`
   ${elevations(10)};
-  background-color: #ffffff;
+  background-color: ${props => props.theme.card.backgroundColor};
   width: 100%;
   border-radius: 4px;
   padding: 16px 16px 0 16px;
