@@ -78,7 +78,7 @@ const ToggleThemeButton = styled.button<{ darkMode: boolean }>`
   ${props =>
     props.darkMode
       ? css`
-          color: white;
+          color: orange;
         `
       : css`
           color: yellow;
