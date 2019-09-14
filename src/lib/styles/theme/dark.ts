@@ -2,7 +2,7 @@ export default {
   backgroundColor: '#282d49',
   borderColor: 'rgba(255, 255, 255, 0.26)',
   card: {
-    backgroundColor: '#2c2f3d',
+    backgroundColor: '#31375c',
   },
   chart: {
     backgroundColor: '#454545',
