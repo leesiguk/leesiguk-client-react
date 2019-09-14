@@ -4,6 +4,9 @@ import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
 import palette from '../../lib/styles/pallete';
 import elevations from '../../lib/styles/elevations';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '../../modules';
+import { setDarkMode, setLightMode } from '../../modules/theme';
 
 const AppBarBlock = styled.div<{ scrollY: number }>`
   position: fixed;
@@ -39,8 +42,7 @@ const MainLink = styled(Link)`
   text-decoration: none;
 `;
 
-const AboutLink = styled(Link)`
-  text-decoration: none;
+const iconButtonStyles = css`
   width: 40px;
   height: 40px;
   border: none;
@@ -53,18 +55,46 @@ const AboutLink = styled(Link)`
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s;
-  color: ${palette.red6};
 
   &:hover,
   &:focus {
     background-color: rgba(0, 0, 0, 0.26);
   }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.46);
+  }
+`;
+
+const AboutLink = styled(Link)`
+  ${iconButtonStyles};
+  text-decoration: none;
+  color: ${palette.red6};
+`;
+
+const ToggleThemeButton = styled.button<{ darkMode: boolean }>`
+  ${iconButtonStyles};
+  margin-right: 8px;
+  ${props =>
+    props.darkMode
+      ? css`
+          color: white;
+        `
+      : css`
+          color: yellow;
+        `};
 `;
 
 const AppBar: React.FC = () => {
+  const dispatch = useDispatch();
+  const darkMode = useSelector((state: RootState) => state.theme.darkMode);
   const [scrollY, setScrollY] = useState(0);
   const onScroll = () => {
     setScrollY(window.scrollY);
+  };
+
+  const toggleTheme = () => {
+    darkMode ? dispatch(setLightMode()) : dispatch(setDarkMode());
   };
 
   useEffect(() => {
@@ -80,6 +110,11 @@ const AppBar: React.FC = () => {
         <img src={logo} alt="logo" />
       </MainLink>
       <Spacer />
+      <ToggleThemeButton darkMode={darkMode} onClick={toggleTheme}>
+        <i className="material-icons">
+          {darkMode ? 'wb_sunny' : 'brightness_3'}
+        </i>
+      </ToggleThemeButton>
       <AboutLink to="/about">
         <i className="material-icons">favorite</i>
       </AboutLink>
