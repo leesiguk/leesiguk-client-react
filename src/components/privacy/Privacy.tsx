@@ -1,8 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { breakpoints } from '../../lib/styles/responsive';
+import SideAds from '../common/SideAds';
 
 const PrivacyBlock = styled.div`
-  padding-top: 64px;
+  padding: 64px ${160 + 16}px 0 ${160 + 16}px;
+
+  @media (max-width: ${breakpoints.medium}) {
+    padding: 64px 0 0 0;
+  }
 `;
 
 const PrivacyContentBlock = styled.div`
@@ -90,6 +96,8 @@ const Privacy: React.FC<PrivacyProps> = () => {
           </p>
         </Content>
       </PrivacyContentBlock>
+      <SideAds position="left" />
+      <SideAds position="right" />
     </PrivacyBlock>
   );
 };
