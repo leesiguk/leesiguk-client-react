@@ -8,6 +8,7 @@ import light from './lib/styles/theme/light';
 import dark from './lib/styles/theme/dark';
 import { useSelector } from 'react-redux';
 import { RootState } from './modules';
+import ScrollToTop from './components/common/ScrollToTop';
 
 const App: React.FC = () => {
   const darkMode = useSelector((state: RootState) => state.theme.darkMode);
@@ -15,6 +16,7 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={darkMode ? dark : light}>
       <Router>
+        <ScrollToTop />
         <Switch>
           <Route path="/" component={MainPage} exact />
           <Route path="/about" component={AboutPage} />
