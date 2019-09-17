@@ -5,6 +5,7 @@ import palette, { buttonColorMap } from '../../lib/styles/pallete';
 type ColorType = 'teal' | 'gray' | 'darkGray' | 'lightGray';
 type ButtonSize = 'medium' | 'large';
 
+// eslint-disable-next-line
 const ButtonBlock = styled.button<{
   color: ColorType;
   inline: boolean;

@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import Image from '../common/Image';
 import { Game, BrandType } from '../../containers/Main';
 
+// eslint-disable-next-line
 const MainCardCurrentLikeChartBlock = styled.div<{
   brandType: BrandType;
 }>`
