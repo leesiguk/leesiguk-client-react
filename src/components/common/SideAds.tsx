@@ -32,14 +32,14 @@ const SideAds: React.FC<SideAdsProps> = ({ position }) => {
       {position === 'left' ? (
         <ins
           className="kakao_ad_area"
-          data-ad-unit="DAN-skpkdedji8o6"
+          data-ad-unit="DAN-rh893plw6blk"
           data-ad-width="160"
           data-ad-height="600"
         />
       ) : (
         <ins
           className="kakao_ad_area"
-          data-ad-unit="DAN-trwezrxrez3p"
+          data-ad-unit="DAN-qxw4xmv3b0wy"
           data-ad-width="160"
           data-ad-height="600"
         />
