@@ -9,6 +9,7 @@ import dark from './lib/styles/theme/dark';
 import { useSelector } from 'react-redux';
 import { RootState } from './modules';
 import ScrollToTop from './components/common/ScrollToTop';
+import NotFoundPage from './pages/NotFoundPage';
 
 const App: React.FC = () => {
   const darkMode = useSelector((state: RootState) => state.theme.darkMode);
@@ -19,8 +20,9 @@ const App: React.FC = () => {
         <ScrollToTop />
         <Switch>
           <Route path="/" component={MainPage} exact />
-          <Route path="/about" component={AboutPage} />
-          <Route path="/privacy" component={PrivacyPage} />
+          <Route path="/about" component={AboutPage} exact />
+          <Route path="/privacy" component={PrivacyPage} exact />
+          <Route component={NotFoundPage} />
         </Switch>
       </Router>
     </ThemeProvider>
