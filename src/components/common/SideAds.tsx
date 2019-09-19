@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import { breakpoints } from '../../lib/styles/responsive';
 
@@ -27,6 +27,15 @@ export interface SideAdsProps {
 }
 
 const SideAds: React.FC<SideAdsProps> = ({ position }) => {
+  useEffect(() => {
+    const script = document.createElement('script');
+
+    script.src = '//t1.daumcdn.net/adfit/static/ad.min.js';
+    script.async = true;
+
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <SideAdsBlock position={position}>
       {position === 'left' ? (
