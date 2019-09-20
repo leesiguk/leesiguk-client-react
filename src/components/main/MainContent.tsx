@@ -5,6 +5,7 @@ import MainCardSkeleton from './MainCardSkeleton';
 import { Game } from '../../containers/Main';
 import { breakpoints } from '../../lib/styles/responsive';
 import MainCardAds from './MainCardAds';
+import BottomAds from '../common/BottomAds';
 
 const MainContentBlock = styled.div`
   width: 100%;
@@ -81,6 +82,7 @@ const MainContent: React.FC<MainContentProps> = ({ games, loading }) => {
           <MainCardAds />
         </Cols>
       )}
+      <BottomAds />
     </MainContentBlock>
   );
 };
