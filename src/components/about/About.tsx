@@ -179,7 +179,7 @@ const MainCard: React.FC<AboutProps> = () => {
           </Button>
         </ButtonRouterLink>
         <ButtonLink
-          href="mailto:siguklee@gamil.com"
+          href="mailto:siguklee@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
