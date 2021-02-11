@@ -15,7 +15,7 @@
     "@types/react-router-dom": "^4.3.5",
     "@types/react-transition-group": "^4.2.2",
     "@types/styled-components": "^4.1.18",
-    "apexcharts": "^3.8.6",
+    "apexcharts": "^3.24.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.3.0",
     "firebase": "^6.6.0",
